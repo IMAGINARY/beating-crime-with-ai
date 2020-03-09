@@ -100,8 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-  <tw-storydata name="Beating Crime with AI" startnode="1" creator="Twine" creator-version="2.3.5" ifid="4FE5ADFA-528C-4739-AC76-94432668FE89" zoom="1" format="SugarCube" format-version="2.30.0" options="" hidden>
-  <style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+	<tw-storydata name="Beating Crime with AI" startnode="1" creator="Twine" creator-version="2.3.5" ifid="4FE5ADFA-528C-4739-AC76-94432668FE89" zoom="1" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 
 /* exo-2-200 - latin */
 @font-face {
@@ -143,6 +142,31 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
        url('fonts/exo-2-v7-latin-600.woff') format('woff'), /* Modern Browsers */
        url('fonts/exo-2-v7-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
        url('fonts/exo-2-v7-latin-600.svg#Exo2') format('svg'); /* Legacy iOS */
+}
+
+.speech-bubble {
+  font-weight: 400;
+	position: relative;
+	background: #F0F0F0;
+	border-radius: .5em;
+  padding: 0 2em 1em 2em;
+  margin: 0 1em 1em 1em;
+  color: black;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 75%;
+	width: 0;
+	height: 0;
+	border: 2em solid transparent;
+	border-right-color: #F0F0F0;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -1em;
+	margin-left: -2em;
 }
 
 #story {
@@ -512,9 +536,11 @@ Als erste Aufgabe in Ihrer neuen Arbeitswoche finden Sie Meetings mit drei versc
 
 </tw-passagedata><tw-passagedata pid="38" name="Deutschland" tags="" position="800,452" size="100,100">Bereits sechs Bundesländer in Deutschland experimentieren mit “Predictive Policing”-Programmen: Baden-Württemberg, Bayern, Berlin, Niedersachsen, Nord-Rhein-Westfalen, Hessen.
 
-&lt;&lt;return&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Tool zur Vorhersage von Verbrechen" tags="" position="809,314" size="100,100">Strafverfolgungsbehörden wie Polizei und Staatsanwaltschaft befassen sich weltweit mit Software-Programmen, die Wahrscheinlichkeit für Verbrechen berechnen. Das Ziel von “Predictive Policing” ist die Vorhersage, wo und wann Verbrechen stattfinden könnten. Damit sollen Verbrechen verhindert werden, noch bevor sie passieren.
+&lt;&lt;return&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Tool zur Vorhersage von Verbrechen" tags="" position="809,314" size="100,100">&lt;blockquote class=&quot;speech-bubble&quot;&gt;
+Strafverfolgungsbehörden wie Polizei und Staatsanwaltschaft befassen sich weltweit mit Software-Programmen, die Wahrscheinlichkeit für Verbrechen berechnen. Das Ziel von “Predictive Policing” ist die Vorhersage, wo und wann Verbrechen stattfinden könnten. Damit sollen Verbrechen verhindert werden, noch bevor sie passieren.
 
 Das wird durch künstliche Intelligenzen möglich gemacht, die ihre Algorithmen an hohen Datenmengen trainieren.
+&lt;/blockquote&gt;
 
 &lt;&lt;return&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="Wertung" tags="" position="126,875" size="100,100">Bewertet wird z.B. wie alt eine Person bei der ersten Verhaftung war. Oder wie oft die Person bereits wegen illegalen Waffenbesitzes, Drogenkonsum oder Gewaltverbrechen inhaftiert war. Außerdem wird beobachtet, ob ein negativer oder positiver Trend messbar ist - also ob in letzter Zeit mehr oder weniger Straftaten begangen wurden. 
 
