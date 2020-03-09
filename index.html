@@ -145,6 +145,25 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
        url('fonts/exo-2-v7-latin-600.svg#Exo2') format('svg'); /* Legacy iOS */
 }
 
+#story {
+  margin: 0;
+  padding-top: 10vh;
+  height: 100vh;
+}
+
+#passages {
+  top: 10vh;
+  left: 25vw;
+  width: 50vw;
+  height: 100%;
+  text-align: justify;
+}
+
+.passage {
+  padding: 0;
+  left: 0;
+}
+
 .passage a {
   font-size: 22px;
   border-style: solid;
@@ -164,10 +183,15 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 body {
   font-family: 'Exo 2';
   font-weight: 200;
-  font-size: 24px;
+  font-size: 26px;
   color: #F8F8F8;
   background-color: #303030;  
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+}
+
+#ui-bar {
+	display: none;
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
 </script><tw-passagedata pid="1" name="Welcome" tags="" position="474,45" size="100,100">Kann man mit Künstlicher Intelligenz Verbrechen vorhersagen? 
 
 Was im Film “Minority Report” noch Fiktion war, ist mittlerweile tatsächlich im Alltag angekommen. Wer profitiert von diesen Technologien? Wo liegen die Herausforderungen und Hürden? 
