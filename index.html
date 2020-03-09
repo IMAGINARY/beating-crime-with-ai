@@ -215,6 +215,30 @@ body {
 #ui-bar {
 	display: none;
 }
+
+div.icon {
+  position: relative;
+  width: 4vw;
+  height: 4vw;
+  left: -8vw;
+  top: 8vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+
+div.mayor {
+  background-image: url("img/mayor.png");
+}
+
+div.police {
+  background-image: url("img/police.png");
+}
+
+div.civil_rights {
+  background-image: url("img/civil_rights.png");
+}
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 </script><tw-passagedata pid="1" name="Welcome" tags="" position="474,45" size="100,100">Kann man mit Künstlicher Intelligenz Verbrechen vorhersagen? 
 
@@ -236,18 +260,22 @@ Gelb hinterlegte Worte zeigen Ihnen Optionen an. Sie treffen Entscheidungen, ind
 
 &lt;&lt;set $mayor to 0&gt;&gt;
 &lt;&lt;set $police to 0&gt;&gt;
-&lt;&lt;set $civil_rights to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Als erstes treffen Sie die Bürgermeisterin." tags="" position="476,397" size="100,100">Bürgermeisterin: “Herzlich Willkommen! Schön, dass Sie gleich mit vollem Einsatz starten. Ich habe meinen Wählerinnen und Wählern versprochen, die Kriminalitätsrate in unserer schönen Stadt deutlich zu senken. Für mich hat dieses Projekt oberste Priorität. 
+&lt;&lt;set $civil_rights to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Als erstes treffen Sie die Bürgermeisterin." tags="" position="476,397" size="100,100">&lt;div class=&quot;icon mayor&quot;&gt;&lt;/div&gt;
+Bürgermeisterin: “Herzlich Willkommen! Schön, dass Sie gleich mit vollem Einsatz starten. Ich habe meinen Wählerinnen und Wählern versprochen, die Kriminalitätsrate in unserer schönen Stadt deutlich zu senken. Für mich hat dieses Projekt oberste Priorität. 
 
 Kommen wir gleich zur Sache. Wie Sie vielleicht schon wissen, kämpfen wir vor allem gegen häusliche Gewalt, Einbrüche und Diebstahl. Lassen Sie uns gemeinsam ein KI-System entwickeln, um unsere Städte in [[Deutschland]] sicherer zu machen! 
 
 Kommen Sie, ich stelle Ihnen jetzt gleich den Polizeichef vor.” 
 
-[[Weiter zum Polizeichef]]</tw-passagedata><tw-passagedata pid="4" name="Weiter zum Polizeichef" tags="" position="476,547" size="100,100">Polizeichef: “Sehr erfreut! Als oberster Chef der Polizei hier, versichere ich Ihnen meine vollste Aufmerksamkeit. Unter uns: Ich kenne meine Mitarbeiterinnen und Mitarbeiter und muss Ihnen sagen, dass nicht alle gegenüber neuen Technologien so aufgeschlossen sind wie ich... wenn Sie verstehen. 
+[[Weiter zum Polizeichef]]</tw-passagedata><tw-passagedata pid="4" name="Weiter zum Polizeichef" tags="" position="476,547" size="100,100">
+  &lt;div class=&quot;icon police&quot;&gt;&lt;/div&gt;
+  Polizeichef: “Sehr erfreut! Als oberster Chef der Polizei hier, versichere ich Ihnen meine vollste Aufmerksamkeit. Unter uns: Ich kenne meine Mitarbeiterinnen und Mitarbeiter und muss Ihnen sagen, dass nicht alle gegenüber neuen Technologien so aufgeschlossen sind wie ich... wenn Sie verstehen. 
 
 Ich erwarte mir von Ihnen daher ein gut funktionierendes Produkt, das jede und jeder fehlerfrei bedienen kann. Es soll für uns eine Unterstützung sein, keine zusätzliche Last. Wir haben ja ohnehin schon zu wenig Personal.”
 
 [[Zurück ins Büro]]
-</tw-passagedata><tw-passagedata pid="5" name="Zurück ins Büro" tags="" position="476,697" size="100,100">Kaum zurück im Büro treffen Sie auf den Leiter der wichtigsten Bürgerrechtsbewegung. Auch er freut sich Sie kennenzulernen:
+</tw-passagedata><tw-passagedata pid="5" name="Zurück ins Büro" tags="" position="476,697" size="100,100">&lt;div class=&quot;icon civil_rights&quot;&gt;&lt;/div&gt;
+Kaum zurück im Büro treffen Sie auf den Leiter der wichtigsten Bürgerrechtsbewegung. Auch er freut sich Sie kennenzulernen:
 
 “Als Vertreter mehrer Bürgerrechtsbewegungen unserer Stadt muss ich Ihnen meine äußersten Sorgen bezüglich dieses Vorhabens ausdrücken. Bei uns werden schon jetzt zu viele Fälle von Diskriminierung angezeigt. Wenn eine künstliche Intelligenz mit diesen fehlerhaften und sensiblen Daten trainiert wird, fürchten wir eine rapide Verschlechterung der Situation und vermehrte rassistische Übergriffe. Wir stimmen da in hohem Maße den [[Bedenken unserer amerikanischen Kolleginnen und Kollegen]] zu. Ich hoffe Sie verstehen, dass wir “Predictive Policing” so transparent wie möglich gestalten müssen. Daran führt kein Weg vorbei.” 
 
