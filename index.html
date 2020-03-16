@@ -251,7 +251,7 @@ div.civil_rights {
   background-image: url("img/civil_rights.png");
 }
 
-div.left_bar {
+div.tasklist {
   background-repeat: repeat-y;
   background: #C0C0C0;
 
@@ -266,14 +266,14 @@ div.left_bar {
   border-radius: 4px;
 }
 
-.list_header {
+.tasklist_header {
   padding: 5px 10px 5px 10px;
   color: black;
   font-size: 24px;
   font-weight: bold;
 }
 
-.list_item {
+.tasklist_item {
   color: black;
 }
 
@@ -309,15 +309,15 @@ function taskStyleInList(taskId, currentTask) {
 		return "";
 }
 
-const preListHtml = '<div class="left_bar">' +
-			'<span class="list_header">Task List</span><ul>';
+const preListHtml = '<div class="tasklist">' +
+			'<span class="tasklist_header">Task List</span><ul>';
 
 const postListHtml = '</ul></div>';
 
 function buildTaskListHtml(currentTask) {
   return TaskIds.map( id => {
-    return '<li class="list_item ' + taskStyleInList(id, currentTask) + '">' + Tasks[id] + '</li>';
-  });
+    return '<li class="tasklist_item ' + taskStyleInList(id, currentTask) + '">' + Tasks[id] + '</li>';
+  }).join('');
 }
 
 macros.inittasks = {
