@@ -249,6 +249,40 @@ div.civil_rights {
   background-image: url("img/civil_rights.png");
 }
 
+div.left_bar {
+  background-repeat: repeat-y;
+  background: #C0C0C0;
+
+  position: absolute;
+  right: 1vw;
+  top: 10vw;
+  width: 20vw;
+  height: 50vh;
+  padding: 20px 5px 10px 0;
+  font-size: 20px;
+  line-height: 30px;
+  border-radius: 4px;
+}
+
+.list_header {
+  padding: 5px 10px 5px 10px;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.list_item {
+  color: black;
+}
+
+.completed {
+  color: #808080;
+  text-decoration: line-through;
+}
+
+.current {
+  font-weight: bold;
+}
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
@@ -539,7 +573,16 @@ Die bislang am häufigsten verwendete Methode zur Vorhersage von Verbrechen hei�
 Entscheidungsbäume
 Das System “HunchLab” verwendet so genannte Entscheidungsbäume für seine Berechnungen. Durch eine Reihe von Ja-/Nein-Fragen wird ein Raster erstellt, auf dessen Basis Wahrscheinlichkeiten berechnet werden: Wurde in dieser Zone vorige Woche eine Straftat gemeldet? Gibt es Nachtclubs in dieser Zone? Gibt es eine Bushaltestelle?
 
-&lt;&lt;return Zurück&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Weiter" tags="" position="635,318" size="100,100">&#39;&#39;Es ist Ihr erster Tag im neuen Job.&#39;&#39; Als erfahrene*r Datenwissenschaftler*in werden Sie ab sofort der Stadtverwaltung helfen, ein &lt;span class=&quot;info_link&quot;&gt;[[Tool zur Vorhersage von Verbrechen]]&lt;/span&gt; zu entwickeln. Sie haben den Job angenommen, weil Sie hoffen, Ihren Mitbürger*innen ein sichereres Leben zu ermöglichen. 
+&lt;&lt;return Zurück&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Weiter" tags="" position="635,318" size="100,100">&lt;div class=&quot;left_bar&quot;&gt;
+  &lt;span class=&quot;list_header&quot;&gt;Task List&lt;/span&gt;
+  &lt;ul&gt;
+&lt;li class=&quot;list_item completed&quot;&gt;Start your new job&lt;/li&gt;
+&lt;li class=&quot;list_item current&quot;&gt;Talk with all stakeholders&lt;/li&gt;
+&lt;li class=&quot;list_item&quot;&gt;Choose methods&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+    
+&#39;&#39;Es ist Ihr erster Tag im neuen Job.&#39;&#39; Als erfahrene*r Datenwissenschaftler*in werden Sie ab sofort der Stadtverwaltung helfen, ein &lt;span class=&quot;info_link&quot;&gt;[[Tool zur Vorhersage von Verbrechen]]&lt;/span&gt; zu entwickeln. Sie haben den Job angenommen, weil Sie hoffen, Ihren Mitbürger*innen ein sichereres Leben zu ermöglichen. 
 
 Als erste Aufgabe in Ihrer neuen Arbeitswoche finden Sie Meetings mit drei verschiedenen Interessensgruppen im Kalender. Sie wollen sich mit ihnen treffen, um ihre jeweiligen Ideen und Bedenken zu besprechen. 
 
