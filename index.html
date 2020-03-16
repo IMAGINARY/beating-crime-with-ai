@@ -315,9 +315,9 @@ const preListHtml = '<div class="left_bar">' +
 const postListHtml = '</ul></div>';
 
 function buildTaskListHtml(currentTask) {
-	return '<li class="list_item">Start your new job</li>' +
-'<li class="list_item">Talk with all stakeholders</li>' +
-'<li class="list_item">Choose methods</li>';
+  return TaskIds.map( id => {
+    return '<li class="list_item ' + taskStyleInList(id, currentTask) + '">' + Tasks[id] + '</li>';
+  });
 }
 
 macros.inittasks = {
