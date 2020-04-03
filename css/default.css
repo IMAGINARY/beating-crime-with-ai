@@ -1,3 +1,11 @@
+@import url('./font.css');
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 200;
+    font-size: 26px;
+}
+
 #story {
     height: 90vh !important;
 }
@@ -30,4 +38,27 @@ button:hover {
     border: none !important;
     background-color: transparent;
     color: #fff;
+}
+
+div.icon {
+    position: relative;
+    width: 4vw;
+    height: 4vw;
+    left: -8vw;
+    top: 8vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+div.mayor {
+    background-image: url("../img/mayor.png");
+}
+
+div.police {
+    background-image: url("../img/police.png");
+}
+
+div.civil_rights {
+    background-image: url("../img/civil_rights.png");
 }
