@@ -4,10 +4,8 @@ body {
     font-family: 'Exo 2', sans-serif;
     font-weight: 200;
     font-size: 26px;
-}
-
-#story {
-    height: 90vh !important;
+    color: #F8F8F8;
+    background-color: #303030;
 }
 
 button {
@@ -20,6 +18,58 @@ button {
 
 button:hover {
     background-color: #929292;
+}
+
+#ui-bar {
+    display: none;
+}
+
+#story {
+    height: 85vh !important;
+    padding-top: 15vh;
+}
+
+#story {
+    margin: 0;
+}
+
+#passages {
+    top: 10vh;
+    margin: 0 30vw 0 auto;
+    width: 50vw;
+    height: 100%;
+    text-align: justify;
+}
+
+.passage {
+    padding: 0;
+    left: 0;
+}
+
+.passage a {
+    font-size: 22px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #fff058;
+    border-radius: 4px;
+    padding: 4px 5px 4px 5px;
+    color: white;
+}
+
+.passage a:hover {
+    background-color: #fff058;
+    color: black;
+    text-decoration: none;
+}
+
+.info_link a {
+    border-color: #8f1a81;
+}
+
+.info_link a:hover {
+    background-color: #8f1a81;
+    color: white;
+    text-decoration: none;
 }
 
 .restart-button {
@@ -40,25 +90,88 @@ button:hover {
     color: #fff;
 }
 
-div.icon {
-    position: relative;
-    width: 4vw;
-    height: 4vw;
-    left: -8vw;
-    top: 8vh;
+.icon {
+    position: absolute;
+    width: 7vw;
+    height: 7vw;
+    left: 10vw;
+    top: 16vh;
     background-repeat: no-repeat;
     background-size: cover;
     display: inline-block;
 }
 
-div.mayor {
-    background-image: url("../img/mayor.png");
+.icon.mayor {
+    background-image: url("../img/mayor.svg");
 }
 
-div.police {
-    background-image: url("../img/police.png");
+.icon.police {
+    top: 15vh;
+    background-image: url("../img/police.svg");
 }
 
-div.civil_rights {
-    background-image: url("../img/civil_rights.png");
+.icon.civil_rights {
+    top: 7.5vw;
+    width: 7.5vw;
+    height: 7.5vw;
+    left: 9.5vw;
+    background-image: url("../img/civil_rights.svg");
+}
+
+.speech-bubble {
+    font-weight: 400;
+    position: relative;
+    background: #F0F0F0;
+    border-radius: .5em;
+    padding: 0 2em 1em 2em;
+    margin: 0 1em 1em 1em;
+    color: black;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 75%;
+    width: 0;
+    height: 0;
+    border: 2em solid transparent;
+    border-right-color: #F0F0F0;
+    border-left: 0;
+    border-bottom: 0;
+    margin-top: -1em;
+    margin-left: -2em;
+}
+
+div.tasklist {
+    position: absolute;
+    right: 1em;
+    top: 8vw;
+    width: 20vw;
+    height: 50vh;
+    padding: 20px 5px 10px 0;
+    border-radius: 4px;
+    background-color: #c5c5c5;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.tasklist_header {
+    padding: 5px 10px 5px 10px;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.tasklist_item {
+    color: black;
+}
+
+.completed {
+    color: #808080;
+    text-decoration: line-through;
+}
+
+.current {
+    font-weight: bold;
 }
