@@ -1,0 +1,33 @@
+#story {
+    height: 90vh !important;
+}
+
+button {
+    border: none;
+    background-color: #929292;
+    color: #303030;
+    border-radius: 0.2em;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #929292;
+}
+
+.restart-button {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+}
+
+#ui-dialog-close {
+    color: #fff;
+    width: 3em;
+    padding-left: 1em;
+}
+
+#ui-dialog-close:hover {
+    border: none !important;
+    background-color: transparent;
+    color: #fff;
+}

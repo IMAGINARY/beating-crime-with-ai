@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Beating Crime with AI" startnode="1" creator="Twine" creator-version="2.3.5" ifid="4FE5ADFA-528C-4739-AC76-94432668FE89" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* exo-2-200 - latin */
+	<tw-storydata name="Beating Crime with AI" startnode="1" creator="Twine" creator-version="2.3.6" ifid="4FE5ADFA-528C-4739-AC76-94432668FE89" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* exo-2-200 - latin */
 @font-face {
   font-family: 'Exo 2';
   font-style: normal;
@@ -339,6 +339,13 @@ macros.completetask = {
 		state.active.variables.tasks.push(params[0]);
 	}
 };
+
+State.reset();
+importStyles("css/default.css");
+window.l10nStrings = {};
+importScripts("js/de.min.js", "js/default.js").then(() => {
+    l10nStrings = Object.assign({}, l10nStrings, window.l10nStrings);
+});
 </script><tw-passagedata pid="1" name="Welcome" tags="" position="474,45" size="100,100">&lt;&lt;inittasks&gt;&gt;
 &#39;&#39;Kann man mit Künstlicher Intelligenz Verbrechen vorhersagen?&#39;&#39;
 
@@ -510,7 +517,7 @@ Sie haben nur Budget, um eine Forschungsfrage zu analysieren. Was interessiert S
 
 [[Wie genau treffen meine Vorhersagen zu?]]
 [[Welche Wirkung meiner Vorhersagen sind meßbar?]]
-&lt;&lt;taskbar evaluate&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Wie genau treffen meine Vorhersagen zu?" tags="" position="396.33333333333337,2661.6666666666665" size="100,100">&#39;&#39;In den folgenden Wochen protokollieren Sie alle Vorhersagen.&#39;&#39; Sobald Verbrechen gemeldet werden, kontrollieren Sie, wie genau Ihre Vorhersagen waren: Haben Sie den richtigen Zeitpunkt vorhergesagt? Den genauen Ort? 
+&lt;&lt;taskbar evaluate&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Wie genau treffen meine Vorhersagen zu?" tags="" position="396,2661" size="100,100">&#39;&#39;In den folgenden Wochen protokollieren Sie alle Vorhersagen.&#39;&#39; Sobald Verbrechen gemeldet werden, kontrollieren Sie, wie genau Ihre Vorhersagen waren: Haben Sie den richtigen Zeitpunkt vorhergesagt? Den genauen Ort? 
 
 Zu Forschungszwecken achten Sie besonders darauf, dass die Polizei Ihre Arbeit nicht an die Vorhersagen anpasst (z. B. Konzentration der Polizeipatrouillen auf prognostizierte Hot-Spot-Standorte), da Interventionen zu Verzerrungen in den Daten führen würden.
 
@@ -519,7 +526,7 @@ Zu Forschungszwecken achten Sie besonders darauf, dass die Polizei Ihre Arbeit n
 &lt;&lt;set $mayor += 1&gt;&gt;
 &lt;&lt;set $police -= 0&gt;&gt;
 &lt;&lt;set $civil_rights += 1&gt;&gt;
-&lt;&lt;taskbar evaluate&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Welche Wirkung meiner Vorhersagen sind meßbar?" tags="" position="573,2398.3333333333335" size="100,100">&#39;&#39;Um die Wirkung Ihres Vorhersagetools zu testen, teilen Sie die Stadt in mehrere gleichwertige Bereiche.&#39;&#39; Für eine ausgewählte Stichprobe setzen Sie in den folgenden Wochen Ihr Tool ein und geben die Daten an die Polizei zur Verbrechensbekämpfung weiter. Für andere Stadtteile geht die Polizei im gleichen Zeitraum ihrer Arbeit mit traditionellen Methoden nach. 
+&lt;&lt;taskbar evaluate&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Welche Wirkung meiner Vorhersagen sind meßbar?" tags="" position="573,2398" size="100,100">&#39;&#39;Um die Wirkung Ihres Vorhersagetools zu testen, teilen Sie die Stadt in mehrere gleichwertige Bereiche.&#39;&#39; Für eine ausgewählte Stichprobe setzen Sie in den folgenden Wochen Ihr Tool ein und geben die Daten an die Polizei zur Verbrechensbekämpfung weiter. Für andere Stadtteile geht die Polizei im gleichen Zeitraum ihrer Arbeit mit traditionellen Methoden nach. 
 
 Nach einer Weile vergleichen Sie die Ergebnisse: Wo konnte die Kriminalitätsrate in welchem Ausmaß reduziert werden? Welche Kosten wurden eingespart? Welche unbeabsichtigten Auswirkungen waren sichtbar (z.B. Diskriminierung bestimmter Gruppen)? 
 
@@ -530,10 +537,10 @@ Für jede Frage vergleichen Sie das Ergebnis der beiden Stichproben.
 &lt;&lt;set $mayor += 1&gt;&gt;
 &lt;&lt;set $police -= 0&gt;&gt;
 &lt;&lt;set $civil_rights += 1&gt;&gt;
-&lt;&lt;taskbar evaluate&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Zum Ergebnis" tags="" position="735.6666666666667,2760" size="100,100">&#39;&#39;Der letzte Arbeitstag ist angebrochen.&#39;&#39; Wie am ersten Tag holen Sie sich auch heute das Feedback der Bürgermeisterin, des Polizeipräsidenten und des Direktors der Bürgerrechtsbewegungen ab. Sie sind neugierig, ob Sie alle drei zufrieden stellen konnten. 
+&lt;&lt;taskbar evaluate&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Zum Ergebnis" tags="" position="735,2760" size="100,100">&#39;&#39;Der letzte Arbeitstag ist angebrochen.&#39;&#39; Wie am ersten Tag holen Sie sich auch heute das Feedback der Bürgermeisterin, des Polizeipräsidenten und des Direktors der Bürgerrechtsbewegungen ab. Sie sind neugierig, ob Sie alle drei zufrieden stellen konnten. 
 
 [[Als erstes Treffen Sie den Direktor der Bürgerrechtsbewegung.]]
-&lt;&lt;taskbar evaluate&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Als erstes Treffen Sie den Direktor der Bürgerrechtsbewegung." tags="" position="735.6666666666667,2909" size="100,100">&lt;div class=&quot;icon civil_rights&quot;&gt;&lt;/div&gt;&lt;&lt;nobr&gt;&gt;
+&lt;&lt;taskbar evaluate&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Als erstes Treffen Sie den Direktor der Bürgerrechtsbewegung." tags="" position="735,2909" size="100,100">&lt;div class=&quot;icon civil_rights&quot;&gt;&lt;/div&gt;&lt;&lt;nobr&gt;&gt;
 &lt;&lt;if $civil_rights &gt; 0&gt;&gt;
 &#39;&#39;Direktor:&#39;&#39; &quot;Auch wenn wir Anfangs skeptisch waren, müssen wir zugeben, dass die Vorteile Ihres Systems zu überwiegen scheinen. Die Kriminalitätsraten sinken, unsere Stadt wird zur Vorzeigestadt. Dank Ihrer Offenheit gegenüber einer Zusammenarbeit mit uns, können auch wir uns vorstellen, Ihre Arbeit weiterhin zu unterstützen.&quot;
 
@@ -551,7 +558,7 @@ Sie sind etwas enttäuscht wegen dieser Einschätzung, können aber die meisten 
 &lt;&lt;endif&gt;&gt;&lt;&lt;endnobr&gt;&gt;
 
 [[Zum Polizeipräsidenten]]
-&lt;&lt;taskbar evaluate&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Zum Polizeipräsidenten" tags="" position="735.6666666666667,3060" size="100,100">&lt;div class=&quot;icon police&quot;&gt;&lt;/div&gt;&lt;&lt;nobr&gt;&gt;
+&lt;&lt;taskbar evaluate&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Zum Polizeipräsidenten" tags="" position="735,3060" size="100,100">&lt;div class=&quot;icon police&quot;&gt;&lt;/div&gt;&lt;&lt;nobr&gt;&gt;
 &lt;&lt;if $police &gt; 0&gt;&gt;
 &#39;&#39;Polizeipräsident:&#39;&#39; &quot;Herzlichen Glückwunsch im Namen der Polizei, sie haben gute Arbeit geleistet. Ihre Vorhersagen sind genau genug, um in Zukunft einige Verbrechen frühzeitig zu verhindern. Unsere Arbeit ist durch Ihre Vorhersagen präziser und effizienter geworden. Wir können frei gewordenes Personal für andere Aufgaben einsetzen und starten beispielsweise nächsten Monat ein Programm zur Verkehrserziehung unserer Kinder.&quot;
 
@@ -571,7 +578,7 @@ So heftige Kritik haben Sie nicht erwartet. Aber natürlich war Ihnen nach der i
 &lt;&lt;endif&gt;&gt;&lt;&lt;endnobr&gt;&gt;
 
 [[Ins Rathaus.]]
-&lt;&lt;taskbar evaluate&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="DUMMY Zum Ende" tags="" position="237.33333333333331,3378.3333333333335" size="100,100">Show picture 1 if: $police + $civil_rights + $mayor = bigger than 3
+&lt;&lt;taskbar evaluate&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="DUMMY Zum Ende" tags="" position="237,3378" size="100,100">Show picture 1 if: $police + $civil_rights + $mayor = bigger than 3
 Show picture 2 if: $police + $civil_rights + $mayor = from 0 to 2
 Show picture 3 if: $police + $civil_rights + $mayor = smaller than 0
 
@@ -698,7 +705,7 @@ Ihnen war bereits nach der internen Evaluierung klar, dass noch nicht alles idea
 [[Die nächste Herausforderung wartet bereits.]] 
 
 &lt;&lt;set $_police +=1&gt;&gt;
-&lt;&lt;taskbar choose_method&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Klicken Sie hier für Quellen der zitierten Inhalte und zum Weiterlesen." tags="" position="41.333333333333336,3066.333333333334" size="100,100">Online-Artikel:
+&lt;&lt;taskbar choose_method&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Klicken Sie hier für Quellen der zitierten Inhalte und zum Weiterlesen." tags="" position="41,3066" size="100,100">Online-Artikel:
 
 https://www.spiegel.de/netzwelt/netzpolitik/predictive-policing-in-los-angeles-die-verbrecherjagd-der-zukunft-ist-schon-gescheitert-a-1281943.html
 
@@ -721,7 +728,7 @@ Knoblauch, Tobias (2018): Vor die Lage kommen: Predictive Policing in Deutschlan
 
 &lt;&lt;return Zurück&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="46" name="Danke für&#39;s Mitspielen." tags="" position="28.666666666666664,2561.666666666667" size="100,100">&#39;&#39;Danke fürs Mitspielen und Mitentscheiden.&#39;&#39; Sie sehen, rund um das Thema &quot;Predictive Policing&quot; warten zahlreiche Chancen und Risiken auf uns. Als Gesellschaft müssen wir entscheiden, wie wir damit umgehen wollen. 
+</tw-passagedata><tw-passagedata pid="46" name="Danke für&#39;s Mitspielen." tags="" position="28,2561" size="100,100">&#39;&#39;Danke fürs Mitspielen und Mitentscheiden.&#39;&#39; Sie sehen, rund um das Thema &quot;Predictive Policing&quot; warten zahlreiche Chancen und Risiken auf uns. Als Gesellschaft müssen wir entscheiden, wie wir damit umgehen wollen. 
 
 Haben Sie sich schon einmal gefragt:
 - Was passiert, wenn sensible Daten in die falschen Hände geraten?
