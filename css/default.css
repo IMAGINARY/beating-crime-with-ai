@@ -47,13 +47,16 @@ button:hover {
 }
 
 .passage a {
+    display: inline-block;
+    margin-bottom: 1em;
     font-size: 22px;
     border-style: solid;
     border-width: 1px;
     border-color: #fff058;
     border-radius: 4px;
-    padding: 4px 5px 4px 5px;
+    padding: 0 0.4em;
     color: white;
+    background-color: rgba(255,255,255,0.1);
 }
 
 .passage a:hover {
@@ -64,6 +67,7 @@ button:hover {
 
 .info_link a {
     border-color: #8f1a81;
+    display: inline;
 }
 
 .info_link a:hover {
