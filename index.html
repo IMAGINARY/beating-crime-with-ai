@@ -158,9 +158,9 @@ macros.completetask = {
 };
 
 State.reset();
-importStyles("css/default.css");
+importStyles("css/qrcode-links.css", "css/default.css");
 window.l10nStrings = {};
-importScripts("js/de.min.js", "js/default.js").then(() => {
+importScripts("js/de.min.js", "vendor/kazuhikoarase/qrcode-generator/qrcode.js", "js/qrcode-links.js", "js/default.js").then(() => {
     l10nStrings = Object.assign({}, l10nStrings, window.l10nStrings);
 });
 </script><tw-passagedata pid="1" name="Welcome" tags="" position="474,45" size="100,100">&lt;&lt;inittasks&gt;&gt;&#39;&#39;Kann man mit Künstlicher Intelligenz Verbrechen vorhersagen?&#39;&#39;

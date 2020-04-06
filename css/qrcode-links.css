@@ -1,0 +1,94 @@
+.qrcode-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.qrcode-overlay:after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    font-size: 1.4em;
+    text-align: center;
+    right: 0.5em;
+    top: 0.5em;
+    font-family: tme-fa-icons, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.qrcode-overlay.visible {
+    display: block;
+}
+
+.qrcode-overlay-content {
+    position: absolute;
+    left: 10vw;
+    top: 20vh;
+    width: 80vw;
+}
+
+.qrcode-overlay-code {
+    margin: 1em auto;
+    width: 20vw;
+    height: 20vw;
+    background-color: #fff;
+    border: 1vw solid #fff;
+    border-radius: 0.75vw;
+}
+
+.qrcode-overlay-code svg {
+    width: 100%;
+    height: 100%;
+}
+
+.qrcode-overlay-caption-top {
+    text-align: center;
+    font-weight: bold;
+}
+
+.qrcode-overlay-caption-bottom {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+/* animations */
+
+.qrcode-overlay {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.qrcode-overlay.appearing {
+    opacity: 1;
+}
+
+.qrcode-overlay .qrcode-overlay-content {
+    transition: opacity 0.5s 0.2s, margin-top 0.5s 0.2s;
+    opacity: 0;
+    margin-top: -5em;
+}
+
+.qrcode-overlay.appearing .qrcode-overlay-content {
+    opacity: 1;
+    margin-top: 0;
+}
+
+.qrcode-overlay-caption-top, .qrcode-overlay-caption-bottom {
+    opacity: 0;
+    transition: opacity 0.2s 0.5s;
+}
+
+.qrcode-overlay.appearing .qrcode-overlay-caption-top,
+.qrcode-overlay.appearing .qrcode-overlay-caption-bottom {
+    opacity: 1;
+}
