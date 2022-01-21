@@ -237,13 +237,12 @@ Die Bürgerrechtsbewegungen kündigen Proteste an. Sie sind mit den Kriterien de
 
 Tja, personenbezogene Verfahren bringen Sie hier wohl nicht weiter. Was möchten Sie tun?
 
-[[DUMMY Sie werfen das Handtuch und brechen die Mission ab.]]
+[[Sie werfen das Handtuch und brechen die Mission ab.]]
 [[Sie bauen ortsbezogene Verfahren in Ihre Vorhersagetools ein und entdecken, welche Herausforderungen weiter auf Sie zukommen.]]
 
 &lt;&lt;set $civil_rights -= 1&gt;&gt;
 &lt;&lt;set $mayor -= 1&gt;&gt;
-&lt;&lt;taskbar choose_method&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="DUMMY Sie werfen das Handtuch und brechen die Mission ab." tags="" position="127,1396" size="100,100">DUMMY: A picture of a person getting fired.
-
+&lt;&lt;taskbar choose_method&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Sie werfen das Handtuch und brechen die Mission ab." tags="" position="127,1396" size="100,100">[img[img/defeat700.jpg]]
 
 [[Danke für&#39;s Mitspielen.]]</tw-passagedata><tw-passagedata pid="12" name="ortsbezogene Verfahren" tags="" position="1028,1476" size="100,100">&#39;&#39;Sie haben sich für ortsbezogene Verfahren entschieden.&#39;&#39; Sie haben Kriterien festgelegt und alle Genehmigungen eingeholt. Ab sofort werden die Zonen Ihrer Stadt systematisch bewertet und Risikofaktoren für Verbrechen erhoben. Sie erwarten damit, zahlreiche Einbrüche und Diebstähle frühzeitig zu verhindern.
 
@@ -392,9 +391,19 @@ So heftige Kritik haben Sie nicht erwartet. Aber natürlich war Ihnen nach der i
 &lt;&lt;endif&gt;&gt;&lt;&lt;endnobr&gt;&gt;
 
 [[Ins Rathaus.]]
-&lt;&lt;taskbar evaluate&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="DUMMY Zum Ende" tags="" position="237,3378" size="100,100">Show picture 1 if: $police + $civil_rights + $mayor = bigger than 3
-Show picture 2 if: $police + $civil_rights + $mayor = from 0 to 2
-Show picture 3 if: $police + $civil_rights + $mayor = smaller than 0
+&lt;&lt;taskbar evaluate&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Zum Ende" tags="" position="237,3378" size="100,100">&lt;&lt;nobr&gt;&gt;
+
+&lt;&lt;set $score to $police + $civil_rights + $mayor&gt;&gt;
+
+&lt;&lt;if $score &gt; 3 &gt;&gt;
+[img[img/celebration700.jpg]]
+&lt;&lt;elseif $score &gt;= 0 &gt;&gt;
+[img[img/statusquo700.jpg]]
+&lt;&lt;else&gt;&gt;
+[img[img/protest-en700.jpg]]
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;/nobr&gt;&gt;
 
 [[Danke für&#39;s Mitspielen.]] </tw-passagedata><tw-passagedata pid="29" name="New York" tags="" position="629,2103" size="100,100">&#39;&#39;Die Stadtverwaltung von New York City&#39;&#39; hat 2017 entschieden, dass sie eine spezielle Arbeitsgruppe benötigt, um den Einsatz von KI und automatisierten Entscheidungssystemen zu prüfen. Eine solche Arbeitsgruppe ist die erste ihrer Art.
 
@@ -513,7 +522,7 @@ Sie sehen die Situation ähnlich. Es gab Erfolge zu verzeichnen, aber das Ziel i
 Ihnen war bereits nach der internen Evaluierung klar, dass noch nicht alles ideal läuft. Von den hohen Kosten hören Sie heute aber zum ersten Mal. Nichts desto trotz sind Sie auf Ihre Leistungen im Job stolz.
 &lt;&lt;endif&gt;&gt;&lt;&lt;endnobr&gt;&gt;
 
-[[DUMMY Zum Ende]]
+[[Zum Ende]]
 &lt;&lt;completetask evaluate&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Sie bauen ortsbezogene Verfahren in Ihre Vorhersagetools ein und entdecken, welche Herausforderungen weiter auf Sie zukommen." tags="" position="643,1288" size="100,100">&#39;&#39;Sie haben sich für ortsbezogene Verfahren entschieden.&#39;&#39; Sie haben Kriterien festgelegt und alle Genehmigungen eingeholt. Ab sofort werden die Zonen Ihrer Stadt systematisch bewertet und Risikofaktoren für Verbrechen erhoben. Sie erwarten damit, zahlreiche Einbrüche und Diebstähle frühzeitig zu verhindern.
 
 [[Die nächste Herausforderung wartet bereits.]]
