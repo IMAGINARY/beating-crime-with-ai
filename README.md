@@ -12,6 +12,13 @@ Twine has an [online editor](https://twinery.org/2) which allows importing the i
 again when you finished your modifications. Images and external dependencies (external JS and CSS files) are not
 normally loaded by the online editor but can be used when running the exhibit through a local web server.
 
+## Configuration
+
+Some configuration is possible via the URL query string:
+
+- `hideReferences`: Hide the link to the bibliographic references at the end.
+  The references contain links to external web sites which may be undesired.
+
 ## License
 
 Copyright (c) 2019-2020 IMAGINARY gGmbH
